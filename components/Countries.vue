@@ -14,9 +14,9 @@ import axios from "axios";
 export default {
   data() {
     return {
-      countriesData: null,
-      countriesDataURL: "https://api.collectapi.com/corona/countriesData",
-      authorization: "apikey 6HpOlVa4p18inuusD2Gnml:56mdDziNA0xP9RjOHIP5Ol"
+      countriesData: [],
+      apiURL: "https://covid-193.p.rapidapi.com/",
+      rapidApiKey: "4154a88902msh2ca5b7dca8755f0p1b256cjsnc06e2b045d91"
     };
   },
   mounted() {
@@ -27,11 +27,12 @@ export default {
     getCountriesData() {
       axios({
         method: "get", //you can set what request you want to be
-        url: this.countriesDataURL,
+        url: this.apiURL + 'statistics',
         headers: {
-          Authorization: this.authorization
+					"x-rapidapi-host": "covid-193.p.rapidapi.com/",
+					"x-rapidapi-key": 	this.rapidApiKey
         }
-      }).then(response => (this.countriesData = response.data.result));
+      }).then(response => (this.countriesData = response.data.response));
     }
   }
 };

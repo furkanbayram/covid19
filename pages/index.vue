@@ -7,6 +7,7 @@
         </div>
         <div class="right col-sm-4">
           <Total />
+					<InfoGraph class="mt-2"/>
         </div>
       </div>
     </div>
@@ -17,13 +18,15 @@
 import Header from "~/components/Header.vue";
 import Countries from "~/components/Countries.vue";
 import Total from "~/components/Total.vue";
+import InfoGraph from "~/components/InfoGraph.vue";
 import News from "~/components/News.vue";
 
 export default {
   components: {
     Header,
     Countries,
-    Total,
+		Total,
+		InfoGraph,
     News
   },
 
