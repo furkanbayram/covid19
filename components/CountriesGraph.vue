@@ -1,14 +1,14 @@
 ﻿
 	<template>
-  <div class="test" id="chart-container">
+  <div class="gchart">
     <GChart type="ColumnChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
 <script>
 import { GChart } from "vue-google-charts";
-
 import axios from "axios";
+
 export default {
   components: {
     GChart
@@ -19,17 +19,17 @@ export default {
       apiURL: "https://covid-193.p.rapidapi.com/",
       rapidApiKey: "4154a88902msh2ca5b7dca8755f0p1b256cjsnc06e2b045d91",
       chartData: [
-        ["Year", "Sales", "Expenses", "Profit"],
-        ["2014", 1000, 400, 200],
-        ["2015", 1170, 460, 250],
-        ["2016", 660, 1120, 300],
-        ["2017", 1030, 540, 350]
+        ["Country", "Total", "Recover", "Death"],
+        ["Chine", 110312, 88001, 64543],
+        ["USA", 120312, 18460, 11250],
+        ["Italy", 56910, 11220, 21300],
+        ["Spain", 91030, 31540, 11350],
+        ["Turkey", 81630, 13226, 53139]
       ],
       chartOptions: {
-        chart: {
-          title: "Company Performance",
-          subtitle: "Sales, Expenses, and Profit: 2014-2017"
-        }
+        title: "TOP 5 Country Data",
+        height: "250",
+        colors: ['blue', 'green', 'red']
       }
     };
   },

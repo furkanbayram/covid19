@@ -3,11 +3,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="left col-sm-8">
-          <Countries />
+
         </div>
         <div class="right col-sm-4">
-          <Total />
-					<InfoGraph class="mt-2"/>
         </div>
       </div>
     </div>
@@ -15,19 +13,9 @@
 </template>
 
 <script>
-import Header from "~/components/Header.vue";
-import Countries from "~/components/Countries.vue";
-import Total from "~/components/Total.vue";
-import InfoGraph from "~/components/InfoGraph.vue";
-import News from "~/components/News.vue";
 
 export default {
   components: {
-    Header,
-    Countries,
-		Total,
-		InfoGraph,
-    News
   },
 
   data() {
@@ -62,14 +50,14 @@ export default {
 }
 
 .left{
-  height: 85vh;
-  max-height: 85vh;
+  height: 90vh;
+  max-height: 90vh;
   overflow-y: scroll;
 }
 
 .right{
-  height: 85vh;
-  max-height: 85vh;
+  height: 90vh;
+  max-height: 90vh;
   overflow-y: scroll;
 }
 </style>

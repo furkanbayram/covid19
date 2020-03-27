@@ -27,10 +27,10 @@ export default {
     getCountriesData() {
       axios({
         method: "get", //you can set what request you want to be
-        url: this.apiURL + 'statistics',
+        url: this.apiURL + "statistics",
         headers: {
-					"x-rapidapi-host": "covid-193.p.rapidapi.com/",
-					"x-rapidapi-key": 	this.rapidApiKey
+          "x-rapidapi-host": "covid-193.p.rapidapi.com/",
+          "x-rapidapi-key": this.rapidApiKey
         }
       }).then(response => (this.countriesData = response.data.response));
     }
@@ -39,10 +39,10 @@ export default {
 </script>
 
 
-<style>
-
-
-.countriesDataTable .b-table-sticky-header {
-  max-height: none;
+<style lang="scss" scoped>
+.countriesDataTable {
+  .b-table-sticky-header {
+    max-height: none;
+  }
 }
 </style>

@@ -2,13 +2,13 @@
   <div class="totalData">
     <b-list-group>
       <b-list-group-item>
-        <span>Toplam Vaka Sayısı: {{ totalData.totalCases }}</span>
+        <span>Total Number of Cases: {{ totalData.totalCases }}</span>
       </b-list-group-item>
       <b-list-group-item>
-        <span>Toplam Ölüm Sayısı: {{ totalData.totalDeaths }}</span>
+        <span>Toplam Number of Deaths: {{ totalData.totalDeaths }}</span>
       </b-list-group-item>
       <b-list-group-item>
-        <span>Toplam İyileşen Sayısı: {{ totalData.totalRecovered }}</span>
+        <span>Toplam Number of Recovered: {{ totalData.totalRecovered }}</span>
       </b-list-group-item>
     </b-list-group>
   </div>
@@ -44,14 +44,15 @@ export default {
 </script>
 
 
-<style>
-.totalData ul {
-  list-style: none;
-}
-
-.totalData ul li {
-  font-size: 20px;
-  font-weight: 700;
-  padding: 5px 15px;
+<style lang="scss" scope>
+.totalData {
+  ul {
+    list-style: none;
+    li {
+      font-size: 20px;
+      font-weight: 700;
+      padding: 5px 15px;
+    }
+  }
 }
 </style>

@@ -12,7 +12,8 @@ module.exports = {
 			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+			{ rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Mukta:400,500,700&display=swap&subset=latin-ext'},
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 		]
 	},
   /*
@@ -23,6 +24,7 @@ module.exports = {
   ** Global CSS
   */
 	css: [
+		'@/assets/scss/main.scss'
 	],
   /*
   ** Plugins to load before mounting the App
