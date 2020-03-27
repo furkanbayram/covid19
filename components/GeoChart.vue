@@ -1,6 +1,6 @@
 ﻿<template>
   <div>
-    <GChart type="GeoChart" :data="chartData" :options="chartOptions" />
+    <GChart class="geo" type="GeoChart" :data="test" :options="chartOptions" />
   </div>
 </template>
 
@@ -11,23 +11,60 @@ import { GChart } from "vue-google-charts";
 export default {
   data() {
     return {
-      chartData: [
-        ["Country", "Corona", "Death"],
-        ["Germany", 200, 50],
-        ["United States", 300, 20],
-        ["Brazil", 400, 50,],
-        ["Canada", 500, 40],
-        ["France", 600, 30],
-        ["RU", 700, 5],
-        ["Turkey", 10, 1]
-      ],
+      apiURL: "https://covid-193.p.rapidapi.com/",
+      rapidApiKey: "4154a88902msh2ca5b7dca8755f0p1b256cjsnc06e2b045d91",
+      header: [["Country", "Death", "Corona"]],
+			chartData: [
+			],
       chartOptions: {
         title: "Country Data",
+        height: "100%",
         width: "100%",
         colorAxis: { colors: ["#00853f", "#ffac41", "#e31b23"] },
-        backgroundColor: "#81d4fa",
+        backgroundColor: "#81d4fa"
       }
     };
+  },
+
+  asyncData() {},
+  created() {
+    this.getData();
+  },
+
+  computed: {
+    test: function() {
+      return [...this.header, ...this.chartData]
+    }
+  },
+
+  methods: {
+    getData() {
+      axios({
+        method: "get", //you can set what request you want to be
+        url: this.apiURL + "statistics",
+        headers: {
+          "x-rapidapi-host": "covid-193.p.rapidapi.com/",
+          "x-rapidapi-key": this.rapidApiKey
+        }
+      }).then(
+        response =>
+          (this.chartData = response.data.response.map(data => {
+            return [
+							data.country,
+							data.deaths.total,
+              data.cases.total,
+						];
+
+          }))
+      );
+    }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.geo {
+  max-height: 90vh;
+  height: 90vh;
+}
+</style>

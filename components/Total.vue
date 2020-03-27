@@ -26,19 +26,19 @@ export default {
   },
 
   mounted() {
-    this.getTotal();
+    // this.getTotal();
   },
 
   methods: {
-    getTotal() {
-      axios({
-        method: "get", //you can set what request you want to be
-        url: this.tatalDataURL,
-        headers: {
-          Authorization: this.authorization
-        }
-      }).then(response => (this.totalData = response.data.result));
-    }
+    // getTotal() {
+    //   axios({
+    //     method: "get", //you can set what request you want to be
+    //     url: this.tatalDataURL,
+    //     headers: {
+    //       Authorization: this.authorization
+    //     }
+    //   }).then(response => (this.totalData = response.data.result));
+    // }
   }
 };
 </script>
