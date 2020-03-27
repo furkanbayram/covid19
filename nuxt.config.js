@@ -28,7 +28,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
 	plugins: [
-		{ src: "~/plugins/fusioncharts.js", ssr: false }
+		{ src: "~/plugins/googleChart.js" }
 	],
   /*
   ** Nuxt.js dev-modules
