@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .geo {
-  max-height: 90vh;
-  height: 90vh;
+  max-height: 88vh;
+  height: 88vh;
 }
 </style>

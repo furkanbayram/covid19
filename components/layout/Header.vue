@@ -25,8 +25,8 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-	height: 10vh;
-	max-height: 10vh;
+	height: 12vh;
+	max-height: 12vh;
   background-color: transparent;
   &-nav {
     li {
