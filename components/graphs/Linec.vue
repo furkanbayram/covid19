@@ -1,8 +1,8 @@
 ﻿<template>
   <div>
-    <no-ssr>
+    <client-only>
       <Linec type="line" :options="options" :series="series" />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
