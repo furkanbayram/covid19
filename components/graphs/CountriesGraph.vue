@@ -1,7 +1,7 @@
 ﻿
 	<template>
   <div class="gchart">
-    <GChart type="ColumnChart" :data="chartData" :options="chartOptions" />
+    <!-- <GChart type="ColumnChart" :data="chartData" :options="chartOptions" /> -->
   </div>
 </template>
 
@@ -40,14 +40,7 @@ export default {
   computed: {},
   methods: {
     getData() {
-      axios({
-        method: "get", //you can set what request you want to be
-        url: this.apiURL + "statistics",
-        headers: {
-          "x-rapidapi-host": "covid-193.p.rapidapi.com/",
-          "x-rapidapi-key": this.rapidApiKey
-        }
-      }).then(response => (this.countriesData = response.data.response));
+
     }
   }
 };

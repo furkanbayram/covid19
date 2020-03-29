@@ -25,14 +25,14 @@ export default {
 
   methods: {
     getCountriesData() {
-      axios({
-        method: "get", //you can set what request you want to be
-        url: this.apiURL + "statistics",
-        headers: {
-          "x-rapidapi-host": "covid-193.p.rapidapi.com/",
-          "x-rapidapi-key": this.rapidApiKey
-        }
-      }).then(response => (this.countriesData = response.data.response));
+      // axios({
+      //   method: "get", //you can set what request you want to be
+      //   url: this.apiURL + "statistics",
+      //   headers: {
+      //     "x-rapidapi-host": "covid-193.p.rapidapi.com/",
+      //     "x-rapidapi-key": this.rapidApiKey
+      //   }
+      // }).then(response => (this.countriesData = response.data.response));
     }
   }
 };
