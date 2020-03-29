@@ -20,8 +20,6 @@ export default {
         title: "Country Data",
         height: "100%",
         width: "100%",
-        region: "002",
-        displayMode: "regions",
         datalessRegionColor: "black",
         colorAxis: {
           minValue: 0,
