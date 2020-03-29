@@ -1,6 +1,6 @@
 ﻿<template>
   <div>
-    <GChart class="geo" type="GeoChart" :data="chart" :options="chartOptions" />
+    <GChart class="geo d-block" type="GeoChart" :data="chart" :options="chartOptions" />
   </div>
 </template>
 
