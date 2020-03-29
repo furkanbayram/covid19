@@ -1,6 +1,6 @@
 ﻿<template>
   <div>
-    <GChart class="geo" type="GeoChart" :data="test" :options="chartOptions" />
+    <GChart class="geo" type="GeoChart" :data="chart" :options="chartOptions" />
   </div>
 </template>
 
@@ -13,14 +13,19 @@ export default {
     return {
       apiURL: "https://covid-193.p.rapidapi.com/",
       rapidApiKey: "4154a88902msh2ca5b7dca8755f0p1b256cjsnc06e2b045d91",
-      header: [["Country", "Death", "Corona"]],
-			chartData: [
-			],
+      header: [["Country", "Corona", "Death"]],
+      chartData: [],
       chartOptions: {
         title: "Country Data",
         height: "100%",
-        width: "100%",
-        colorAxis: { colors: ["#00853f", "#ffac41", "#e31b23"] },
+				width: "100%",
+				datalessRegionColor: 'black',
+        colorAxis: {
+					minValue: 0,
+					maxValue: 81433,
+          colors: ["green", "#78ed18", "#eded18", "#ed9118", "#ed1818"]
+        },
+
         backgroundColor: "#81d4fa"
       }
     };
@@ -32,8 +37,8 @@ export default {
   },
 
   computed: {
-    test: function() {
-      return [...this.header, ...this.chartData]
+    chart: function() {
+      return [...this.header, ...this.chartData];
     }
   },
 
@@ -49,12 +54,7 @@ export default {
       }).then(
         response =>
           (this.chartData = response.data.response.map(data => {
-            return [
-							data.country,
-							data.deaths.total,
-              data.cases.total,
-						];
-
+            return [data.country, data.cases.total, data.deaths.total];
           }))
       );
     }

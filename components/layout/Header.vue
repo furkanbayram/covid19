@@ -8,8 +8,8 @@
       <b-navbar-nav>
         <li>
           <nuxt-link to="/">World</nuxt-link>
-          <nuxt-link to="/">Graphs</nuxt-link>
-          <nuxt-link to="/">Tables</nuxt-link>
+          <nuxt-link to="/graphs">Graphs</nuxt-link>
+          <nuxt-link to="/tables">Tables</nuxt-link>
         </li>
       </b-navbar-nav>
     </b-collapse>

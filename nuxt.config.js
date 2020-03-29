@@ -12,9 +12,9 @@ module.exports = {
 			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
 		],
 		link: [
-			{ rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Mukta:400,500,700&display=swap&subset=latin-ext'},
+			{ rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Abel|Aclonica|Acme|Allerta+Stencil|Do+Hyeon|Exo+2|Josefin+Sans|Lekton|Monda|Orbitron|Yanone+Kaffeesatz&display=swap'},
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-		]
+		],
 	},
   /*
   ** Customize the progress-bar color
@@ -30,7 +30,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
 	plugins: [
-		{ src: "~/plugins/googleChart.js" }
+		{ src: "~/plugins/googleChart.js" },
+		{ src: "~/plugins/apexChart.js", ssr: false }
 	],
   /*
   ** Nuxt.js dev-modules

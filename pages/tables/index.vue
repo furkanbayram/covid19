@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CountriesTable from "~/components/CountriesTable.vue";
+import CountriesTable from "~/components/tables/CountriesTable.vue";
 
 export default {
 	components: {
@@ -19,3 +19,9 @@ export default {
 	},
 }
 </script>
+
+<style lang="scss">
+body{
+}
+
+</style>

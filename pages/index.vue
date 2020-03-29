@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import GeoChart from "~/components/GeoChart.vue";
+import GeoChart from "~/components/graphs/GeoChart.vue";
 
 export default {
   name: "Home",
