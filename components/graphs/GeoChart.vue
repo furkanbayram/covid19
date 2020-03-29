@@ -14,15 +14,18 @@ export default {
       apiURL: "https://covid-193.p.rapidapi.com/",
       rapidApiKey: "4154a88902msh2ca5b7dca8755f0p1b256cjsnc06e2b045d91",
       header: [["Country", "Corona", "Death"]],
+
       chartData: [],
       chartOptions: {
         title: "Country Data",
         height: "100%",
-				width: "100%",
-				datalessRegionColor: 'black',
+        width: "100%",
+        region: "002",
+        displayMode: "regions",
+        datalessRegionColor: "black",
         colorAxis: {
-					minValue: 0,
-					maxValue: 81433,
+          minValue: 0,
+          maxValue: 81433,
           colors: ["green", "#78ed18", "#eded18", "#ed9118", "#ed1818"]
         },
 

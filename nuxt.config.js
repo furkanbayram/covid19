@@ -30,8 +30,9 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
 	plugins: [
-		{ src: "~/plugins/googleChart.js" },
-		{ src: "~/plugins/apexChart.js", ssr: false }
+		{ src: "~/plugins/googleChart.js", ssr: false },
+		{ src: "~/plugins/apexChart.js", ssr: false },
+
 	],
   /*
   ** Nuxt.js dev-modules

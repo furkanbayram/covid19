@@ -1,8 +1,8 @@
 ﻿<template>
   <div>
-    <no-ssr>
+    <client-only>
       <Bar type="bar" :options="options" :series="series" />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
           id: "vuechart-example"
         },
         xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+          categories: [1990, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
         }
       },
       series: [

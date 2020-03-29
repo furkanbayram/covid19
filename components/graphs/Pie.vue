@@ -1,8 +1,8 @@
 ﻿<template>
   <div class="mt-2">
-    <no-ssr>
+    <client-only>
       <Pie type="donut" :options="options" :series="series" />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 ﻿<template>
   <div>
-    <no-ssr>
+    <client-only>
       <BarHorizontal type="bar" :options="chartOptions" :series="series" />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

@@ -5,20 +5,28 @@
         <div class="left col-sm-8">
           <div class="row">
             <div class="col-sm-6">
-              <Bar />
+              <div class="graph-container">
+                <Bar />
+              </div>
             </div>
             <div class="col-sm-6">
-              <Linec />
+              <div class="graph-container">
+                <Linec />
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <BarHorizontal />
+              <div class="graph-container">
+                <BarHorizontal />
+              </div>
             </div>
           </div>
         </div>
         <div class="right col-sm-4">
-          <Pie />
+          <div class="graph-container">
+            <Pie />
+          </div>
         </div>
       </div>
     </div>
@@ -29,8 +37,6 @@
 import Bar from "~/components/graphs/Bar.vue";
 import BarHorizontal from "~/components/graphs/BarHorizontal.vue";
 
-import CountriesGraph from "~/components/graphs/CountriesGraph.vue";
-import Total from "~/components/tables/Total.vue";
 import Pie from "~/components/graphs/Pie.vue";
 import Linec from "~/components/graphs/Linec.vue";
 
@@ -39,8 +45,6 @@ export default {
   components: {
     Bar,
     BarHorizontal,
-    CountriesGraph,
-    Total,
     Pie,
     Linec
   },
