@@ -15,25 +15,47 @@ export default {
   data() {
     return {
       options: {
-				colors:['#F44336'],
+				colors:['#F44336', '#34eba4', '#6e34eb'],
         chart: {
-          id: "vuechart-example"
+          id: "apex-wrapper"
         },
         xaxis: {
-          categories: [1990, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+          categories: ''
         }
       },
       series: [
         {
-          name: "series-1",
-          data: [30, 40, 45, 50, 49, 60, 70, 91]
+          name: "Case",
+          data: [124000, 160513, 79541, 97613]
+				},
+				{
+          name: "Recover",
+          data: [100000, 15654, 54313, 12356]
+				},
+				{
+          name: "Death",
+          data: [3531, 7572, 16707, 43213]
         }
       ]
-    };
+		};
   },
 
-  computed: {},
+  computed: {
+		...mapState(["data"]),
+		...mapGetters(["topFiveCountries"])
+	},
 
-  methods: {}
+	mounted() {
+		this.apiData();
+		let categories = this.topFiveCountries.map((country) => {
+			return country;
+		})
+
+		console.log('test', this.topFiveCountries);
+	},
+
+  methods: {
+		...mapActions(["apiData"])
+	}
 };
 </script>

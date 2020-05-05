@@ -23,9 +23,10 @@ export default {
   },
 
   computed: {
-    ...mapState(["data"]),
+		...mapState(["data"]),
+		...mapGetters(),
 
-    mapData: function() {
+    totalCase: function() {
       let data = this.data.map(country => {
         return country.cases.total;
       });
@@ -33,7 +34,7 @@ export default {
       for (var i = 0; i < data.length; i++) {
         sum += data[i];
       }
-      return sum;
+      return sum / 2;
     }
   },
 

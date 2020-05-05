@@ -23,7 +23,6 @@ export default {
         datalessRegionColor: "black",
         colorAxis: {
           minValue: 0,
-					maxValue: 81433,
 					width: "100vh",
           colors: ["green", "#78ed18", "#eded18", "#ed9118", "#ed1818"]
         },

@@ -11,14 +11,14 @@
             </div>
             <div class="col-sm-6">
               <div class="graph-container">
-                <Linec />
+                <!-- <Linec /> -->
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
               <div class="graph-container">
-                <BarHorizontal />
+                <!-- <BarHorizontal /> -->
               </div>
             </div>
           </div>
